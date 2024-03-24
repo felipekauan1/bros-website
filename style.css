@@ -5,9 +5,77 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    a {
+        text-decoration: none;
+    }
 }
 
 body {
     background: #eaeaea;
     color: #222;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #222;
+    font-weight: 600;
+}
+
+.logo span {
+    color: #1743e3;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #222;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #1743e3;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid transparent;
+    transform: rotate(45deg);
+    transition: .4s;
+}
+
+.social-media a:hover {
+    border: 2px solid #fff;
+}
+
+.social-media a i {
+    font-size: 25px;
+    color: #fff;
+    transform: rotate(-45deg);
 }
