@@ -28,6 +28,10 @@ body {
     z-index: 100;
 }
 
+.header a {
+    color: #f56600;
+}
+
 .logo {
     font-size: 25px;
     color: #222;
@@ -81,11 +85,14 @@ span {
 }
 
 .home {
+    position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 50px 8% 0;
+    overflow: hidden;
 }
 
 .home-content {
@@ -114,12 +121,12 @@ span {
 
 .btn {
     display: inline-block;
-    padding: 11px 30px;
+    padding: 13px 34px;
     background: #1743e3;
     border: 2px solid #1743e3;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    font-size: 16px;
+    font-size: 17px;
     color: #eaeaea;
     letter-spacing: 1px;
     font-weight: 600;
@@ -129,4 +136,28 @@ span {
 .btn:hover {
     background: transparent;
     color: #1743e3;
+}
+
+.home-img {
+    position: relative;
+    right: -8%;
+    width: 440px;
+    height: 440px;
+    transform: rotate(45deg);
+}
+
+.home-img .bros-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #eaeaea;
+    border: 25px solid #1743e3;
+}
+
+.home-img .bros-img img {
+    position: absolute;
+    top: -20px;
+    left: -260px;
+    max-width: 710px;
+    transform: rotate(-45deg);
 }
