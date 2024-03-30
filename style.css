@@ -36,6 +36,8 @@ body {
     font-size: 25px;
     color: #222;
     font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
 }
 
 span {
@@ -75,12 +77,12 @@ span {
 }
 
 .social-media a:hover {
-    border: 2px solid #fff;
+    border: 2px solid #eaeaea;
 }
 
 .social-media a i {
     font-size: 25px;
-    color: #fff;
+    color: #eaeaea;
     transform: rotate(-45deg);
 }
 
@@ -152,6 +154,7 @@ span {
     height: 100%;
     background: #eaeaea;
     border: 25px solid #1743e3;
+    box-shadow: -15px 15px 15px rgba(0, 0, 0, .2);
 }
 
 .home-img .bros-img img {
@@ -160,4 +163,27 @@ span {
     left: -260px;
     max-width: 710px;
     transform: rotate(-45deg);
+}
+
+.home .rhombus2 {
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    width: 700px;
+    height: 700px;
+    background: #1743e3;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
