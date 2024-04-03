@@ -45,11 +45,15 @@ span {
 }
 
 .navbar a {
+    display: inline-block;
     font-size: 18px;
     color: #222;
     font-weight: 500;
     margin: 0 20px;
     transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a:hover,
@@ -74,6 +78,9 @@ span {
     border: 2px solid transparent;
     transform: rotate(45deg);
     transition: .4s;
+    opacity: 0;
+    animation: slideSci .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .social-media a:hover {
@@ -104,21 +111,33 @@ span {
 .home-content h1 {
     font-size: 50px;
     line-height: 1.2;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .home-content h3 {
     font-size: 40px;
     color: #1743e3;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.3s;
 }
 
 .home-content p {
     font-size: 16px;
     margin: 15px 0 30px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.6s;
 }
 
 .home-content h4 {
     font-size: 18px;
     margin: 15px 0 30px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.6s;
 }
 
 .btn {
@@ -133,6 +152,9 @@ span {
     letter-spacing: 1px;
     font-weight: 600;
     transition: .5s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
 }
 
 .btn:hover {
@@ -155,6 +177,9 @@ span {
     background: #eaeaea;
     border: 25px solid #1743e3;
     box-shadow: -15px 15px 15px rgba(0, 0, 0, .2);
+    opacity: 0;
+    animation: zoomOut 1s ease forwards;
+    animation-delay: 1.6s;
 }
 
 .home-img .bros-img img {
@@ -163,6 +188,9 @@ span {
     left: -260px;
     max-width: 710px;
     transform: rotate(-45deg);
+    opacity: 0;
+    animation: bike 1s ease forwards;
+    animation-delay: 2s;
 }
 
 .home .rhombus2 {
@@ -174,9 +202,22 @@ span {
     background: #1743e3;
     transform: rotate(45deg);
     z-index: -1;
+    opacity: 0;
+    animation: rhombus2 1s ease forwards;
 }
 
 /* KEYFRAMES ANIMATION */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
@@ -184,6 +225,72 @@ span {
     }
     100% {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideSci {
+    0% {
+        transform: translateX(100px) rotate(45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bike {
+    0% {
+        transform: translate(300px, -300px) scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0) scale(1) rotate(-45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rhombus2 {
+    0% {
+        right: -40%;
+        opacity: 0;
+    }
+    100% {
+        right: -25%;
         opacity: 1;
     }
 }
